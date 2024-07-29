@@ -101,6 +101,62 @@ This repository is a small collection of commonly used Docker commands, designed
     ```
     This command pushes a tagged image to Docker Hub.
 
+## Advance run commands
+
+1. **To run a container in detached mode:**
+   ```sh
+   docker run -d imagename
+   ```
+   This command runs the container in the background and prints the container ID.
+
+2. **To run a container with port binding:**
+   ```sh
+   docker run -p host_port:container_port imagename
+   ```
+   This command maps a port on the host to a port on the container.
+
+3. **To run a container with a specific name:**
+   ```sh
+   docker run --name container_name imagename
+   ```
+   This command runs the container with a specific name.
+
+4. **To run a container with an environment variable:**
+   ```sh
+   docker run -e "ENV_VAR_NAME=value" imagename
+   ```
+   This command sets an environment variable in the container.
+
+5. **To run a container with a volume:**
+   ```sh
+   docker run -v host_directory:container_directory imagename
+   ```
+   This command mounts a directory from the host into the container.
+
+6. **To run a container interactively:**
+   ```sh
+   docker run -it imagename
+   ```
+   This command runs the container in interactive mode with a terminal.
+
+7. **To remove a container automatically after it exits:**
+   ```sh
+   docker run --rm imagename
+   ```
+   This command removes the container once it exits.
+
+8. **To limit a container's memory usage:**
+   ```sh
+   docker run -m memory_limit imagename
+   ```
+   This command limits the amount of memory the container can use.
+
+9. **To run a container with a custom network:**
+   ```sh
+   docker run --network network_name imagename
+   ```
+   This command connects the container to a custom network.
+
 ## Docker Compose Commands
 
 1. **To start services defined in a `docker-compose.yml` file:**
